@@ -19,28 +19,7 @@ Python中封装了ctype可以方便地进行C与Python之间的交互。
     [购买地址](https://sipeed.taobao.com/category-1425471023.htm)  
     K210为RV64 内核处理器，矽速经典款板卡，适合已有该款板卡的用户调试
 
-测试的待加载程序内容为以下的func.c
-```
-#include "stdint.h"
-
-int add(int a, int b)   //无重定位的最简单情况
-{
-    return a+b;
-}
-
-int fib(int n)          //需要重定位，实现约三条内部跳转的重定位码
-{
-    if(n<=1) return 1;
-    else return fib(n-1) + fib(n-2);
-}
-
-int hello(void)         //需要重定位，实现约三条重定位码，并需要能调用外部符号
-{                       //注意在D1的debian系统下实现的话，需要额外的跳转工作量
-    printf("Hello from obj!\n");
-    return 0;
-}
-```
-
+测试的待加载程序内容为本目录下的func.c
 使用目标平台对应工具链编译得到 func.o 作为待测文件，指令为：
 ```
 xxx-gcc -mno-relax -c func.c
@@ -55,6 +34,8 @@ func_fib_t func_fib = (func_fib_t)elf_sym(elf,"fib");
 int fib = func_fib(30);
 printf("fib(30) is %d\n", fib); 
 ```
+
+注意本题目的是在RV单片机上实现动态加载，所以即使是是使用D1平台，也不要直接使用系统自带的libdl库。
 
 对于合格的中级嵌入式工程师，本赛题的参考用时为3～5天。
 
