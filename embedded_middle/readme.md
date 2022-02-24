@@ -18,6 +18,9 @@ Python中封装了ctype可以方便地进行C与Python之间的交互。
 3. Sipeed Maix系列K210开发板
     [购买地址](https://sipeed.taobao.com/category-1425471023.htm)  
     K210为RV64 内核处理器，矽速经典款板卡，适合已有该款板卡的用户调试
+4. Sipeed Longan Nano
+    [购买地址](https://item.taobao.com/item.htm?id=601743142093)  
+    GD32VF103 为RV32内核单片机 
 
 测试的待加载程序内容为本目录下的func.c
 使用目标平台对应工具链编译得到 func.o 作为待测文件，指令为：
