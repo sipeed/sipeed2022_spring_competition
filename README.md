@@ -3,7 +3,7 @@
 赛题信息：https://github.com/sipeed/sipeed2022_spring_competition  
 转发比赛信息到1000人以上相关技术QQ群,500人专业微信群，或专业论坛，  
 即可到矽速官方店领取 BL702 JTAG+UART 调试小板一块～   
-（截图给客服，仅限第一次转发到该群有效）  
+（截图给客服，仅限第一次转发到该群有效, sipeed.taobao.com）  
 ![赛题链接](qr.png)
 
 ## 竞赛简介
